@@ -125,7 +125,7 @@ def video00182():
     # For 00182
     # ffmpeg -i V3C1-100/00182/00182.mov -vf "scdet=s=0:t=2" V3C1-100/00182/00182_shot.mov > output.txt 2>&1
     # copy and paste the contents of output.txt to a new file .txt file, encoding error
-
+    # f"ffmpeg -i V3C1-100/00182/00182.mov -vcodec libx264 -acodec aac -ac 1 -crf 35 V3C1-100/00182/00182_compressed.mp4"
     video_data = {}
 
     video_id = "00182"
@@ -171,7 +171,7 @@ def extract_video_data(video_id: str):
 
 
 if __name__ == '__main__':
-    """
+
     ids = get_video_ids()
 
     ctr = 0
@@ -179,4 +179,5 @@ if __name__ == '__main__':
         ctr += 1
         print(f"[{ctr} / {len(ids)}]")
         extract_video_data(vid)    
-    """
+
+    video00182()
