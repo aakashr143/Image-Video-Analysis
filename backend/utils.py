@@ -94,7 +94,7 @@ def get_video_ids():
 
     video_ids.remove('00182')
 
-    return [video_ids]
+    return video_ids
 
 
 def find_middle_timestamps(timestamps: List[float]) -> List[float]:
