@@ -48,7 +48,11 @@ def get_data():
 
     :return: yield's videoId(str), frameId(str), objects(list[str]), imageVector(list[float]), dominantColors(list[list[int]]), timestamp(float), text(list[str])
     """
-    for video_id in get_video_ids():
+
+    video_ids = get_video_ids()
+    video_ids.append("00182")
+
+    for video_id in video_ids:
         with open(os.path.join(DATA_DIR, video_id, 'data.json'), 'r') as file:
             data = json.load(file)
 
